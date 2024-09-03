@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function my_module_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'conditional_file_upload_form') {
+    $form['#attached']['library'][] = 'core/drupal.ajax';
+  }
+}

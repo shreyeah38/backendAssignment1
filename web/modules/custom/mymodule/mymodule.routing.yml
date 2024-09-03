@@ -1,0 +1,61 @@
+mymodule.formdemo:
+  path: '/mymoduledemo'
+  defaults:
+    _form: '\Drupal\mymodule\Form\MyModuleForm'
+    _title: 'Demo Form'
+  requirements:
+    _permission: 'access administration content'
+
+mymodule.assignment2_form:
+  path: '/ass2'
+  defaults:
+    _controller:  'Drupal\mymodule\Controller\Assignment2::content'
+    _title: 'Just a simple form using Controllers'
+  requirements:
+    _permission: 'access content'
+
+mymodule.assignment3:
+  path: '/assignment3'
+  defaults:
+    _controller: 'Drupal\mymodule\Controller\Assignment3::content'
+    _title: 'Assignment 3'
+  requirements:
+    _permission: 'access content'
+
+
+mymodule.nodes_json:
+  path: '/nodes-json'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\PostController::nodesJson'
+    _title: 'Nodes JSON'
+  requirements:
+    _permission: 'access content'
+    _role: 'administrator'
+    _format: 'json'
+  methods: [GET]
+  options: 
+    _auth: ['basic_auth']
+
+mymodule.create_node:
+  path: '/api/mymodule/create-node'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\PostController::handlePost'
+    _title: 'Create Node'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+    _role: 'administrator'
+    _format: 'json'
+  options: 
+    _auth: ['basic_auth']
+
+
+my_module.conditional_file_upload_form:
+  path: '/conditional-file-upload'
+  defaults:
+    _form: '\Drupal\mymodule\Form\ConditionalFileUploadForm'
+    _title: 'Conditional File Upload Form'
+  requirements:
+    _permission: 'access content'
+
+

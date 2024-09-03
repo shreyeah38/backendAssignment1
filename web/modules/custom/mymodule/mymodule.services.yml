@@ -1,0 +1,4 @@
+services:
+  mymodule.validation_service:
+    class: Drupal\mymodule\Services\ValidationService
+    arguments: []

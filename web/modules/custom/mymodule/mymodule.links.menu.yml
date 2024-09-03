@@ -1,0 +1,21 @@
+mymodule.formdemo:
+  title: Assignment 1
+  description: Link to Assignment 1
+  route_name: mymodule.formdemo
+  weight: 10
+  parent: system.admin
+
+mymodule.assignment2_form:
+  title: Assignment 2
+  description: Link to Assignment 2
+  route_name: mymodule.assignment2_form
+  weight: 10
+  parent: system.admin
+
+
+my_module.conditional_file_upload_form:
+  title: 'Assignment 3'
+  description: 'A form with a conditional file upload option.'
+  route_name: mymodule.conditional_file_upload_form
+  parent: system.main_content
+  weight: 10
